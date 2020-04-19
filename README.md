@@ -34,3 +34,13 @@ By default, whenever you bring down the docker-compose network, your MySQL data 
 volumes:
   - ./mysql:/var/lib/mysql
 ```
+
+## Commands to Run
+
+```
+docker-compose run --rm --user `id -u`:`id -g` composer create-project laravel/laravel .
+```
+
+```
+docker-compose up --d --build
+```
