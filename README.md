@@ -58,3 +58,9 @@ Build the container
 ```
 docker-compose up --d --build
 ```
+
+## Notes
+Sometimes with lower-specced Digital Ocean droplets, you may encounter issues where Composer complains about a lack of memory, to resolve this you need to assign swap space so its happy again.
+https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-16-04
+
+Also sometimes when running composer, it looks like its hung, don't worry and just wait it out!
