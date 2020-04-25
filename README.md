@@ -40,7 +40,7 @@ Either for when I inadvertently forget or if someone stumbles upon this.
 
 Clone the repository into a folder
 ```
-git clone https://github.com/LewisLarsen/docker-compose-laravel.git
+git clone https://github.com/LewisLarsen/docker-compose-laravel.git .
 ```
 src folder likely doesn't exist, better make that and go into it!
 ```
