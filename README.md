@@ -64,3 +64,5 @@ Sometimes with lower-specced Digital Ocean droplets, you may encounter issues wh
 https://www.digitalocean.com/community/tutorials/how-to-add-swap-space-on-ubuntu-16-04
 
 Also sometimes when running composer, it looks like its hung, don't worry and just wait it out!
+
+Additionally if you get "File not found" for the laravel app, just bring the container down and back up, it usually fixes it.
