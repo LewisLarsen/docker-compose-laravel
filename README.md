@@ -38,10 +38,15 @@ volumes:
 
 ## Commands to Run
 
+Run this command in /src
 ```
 docker-compose run --rm --user `id -u`:`id -g` composer create-project laravel/laravel .
 ```
-
+Run this command in the root folder (where Dockerfile is)
 ```
 docker-compose up --d --build
 ```
+
+## Notes
+
+If an "src" folder doesn't exist, make sure to create it. (i.e. `mkdir src`)
