@@ -35,18 +35,26 @@ By default, whenever you bring down the docker-compose network, your MySQL data 
 volumes:
   - ./mysql:/var/lib/mysql
 ```
+## How to use this
+Either for when I inadvertently forget or if someone stumbles upon this.
 
-## Commands to Run
-
-Run this command in /src
+Clone the repository into a folder
+```
+https://github.com/LewisLarsen/docker-compose-laravel.git
+```
+src folder likely doesn't exist, better make that and go into it!
+```
+mkdir src && cd src
+```
+Lets pull in laravel
 ```
 docker-compose run --rm --user `id -u`:`id -g` composer create-project laravel/laravel .
 ```
-Run this command in the root folder (where Dockerfile is)
+Once that has done, head into the main folder (where Dockerfile lives)
+```
+cd ..
+```
+Build the container
 ```
 docker-compose up --d --build
 ```
-
-## Notes
-
-If an "src" folder doesn't exist, make sure to create it. (i.e. `mkdir src`)
