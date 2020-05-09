@@ -46,7 +46,7 @@ src folder likely doesn't exist, better make that and go into it!
 ```
 mkdir src && cd src
 ```
-Lets pull in laravel
+Lets pull in laravel (if using windows remove everything from --rm to composer)
 ```
 docker-compose run --rm --user `id -u`:`id -g` composer create-project laravel/laravel .
 ```
