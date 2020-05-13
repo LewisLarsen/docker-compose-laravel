@@ -93,3 +93,23 @@ services:
     entrypoint: ['php', '/var/www/html/artisan']
     networks:
       - laravel
+
+  mailhog:
+    image: mailhog/mailhog:latest
+    container_name: tall_mailhog
+    restart: always
+    ports:
+      - 1025:1025
+      - 8025:8025
+    networks:
+      - laravel
+
+  redis:
+    image: bitnami/redis:latest
+    container_name: tall_redis
+    command: redis-server --requirepass password
+    restart: always
+    ports:
+      - 6379:6379
+    networks:
+      - laravel
