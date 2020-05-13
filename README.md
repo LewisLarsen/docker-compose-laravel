@@ -20,6 +20,8 @@ Containers created and their ports (if used) are as follows:
 - **phpmyadmin** - `:8081`
 - **mysql** - `:3306`
 - **php** - `:9000`
+- **mailhog** - `:8025`
+- **redis** - `:6379`
 - **npm**
 - **composer**
 - **artisan**
