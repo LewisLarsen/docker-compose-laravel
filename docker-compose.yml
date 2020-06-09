@@ -1,4 +1,4 @@
-version: '3'
+version: '3.8'
 
 networks:
   laravel:
@@ -96,8 +96,7 @@ services:
 
   mailhog:
     image: mailhog/mailhog:latest
-    container_name: tall_mailhog
-    restart: always
+    container_name: mailhog
     ports:
       - 1025:1025
       - 8025:8025
@@ -106,9 +105,8 @@ services:
 
   redis:
     image: bitnami/redis:latest
-    container_name: tall_redis
+    container_name: redis
     command: redis-server --requirepass password
-    restart: always
     ports:
       - 6379:6379
     networks:
