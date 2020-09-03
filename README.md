@@ -10,9 +10,9 @@ First add your entire Laravel project to the `src` folder, then open a terminal 
 
 **New:** Three new containers have been added that handle Composer, NPM, and Artisan commands without having to have these platforms installed on your local computer. Use the following command templates from your project root, modifiying them to fit your particular use case:
 
-- `docker-compose run --rm composer update`
-- `docker-compose run --rm npm run dev`
-- `docker-compose run --rm artisan migrate` 
+- `docker-compose run --rm --user 1000:1000 composer update`
+- `docker-compose run --rm --user 1000:1000 npm run dev`
+- `docker-compose run --rm --user 1000:1000 artisan migrate` 
 
 Containers created and their ports (if used) are as follows:
 
@@ -48,9 +48,17 @@ src folder likely doesn't exist, better make that and go into it!
 ```
 mkdir src && cd src
 ```
+
+### create new laravel project
+
 Lets pull in laravel (if using windows remove everything from --rm to composer)
 ```
 docker-compose run --rm --user `id -u`:`id -g` composer create-project laravel/laravel .
+
+
+### existing laravel project
+clone the repo and run composer install/cp .env.example .env/npm install && run dev
+
 ```
 Once that has done, head into the main folder (where Dockerfile lives)
 ```
