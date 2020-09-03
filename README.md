@@ -54,9 +54,9 @@ mkdir src && cd src
 Lets pull in laravel (if using windows remove everything from --rm to composer)
 ```
 docker-compose run --rm --user `id -u`:`id -g` composer create-project laravel/laravel .
+```
 
-
-### existing laravel project
+### create new laravel project
 clone the repo and run composer install/cp .env.example .env/npm install && run dev
 
 ```
